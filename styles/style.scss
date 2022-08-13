@@ -7,7 +7,7 @@
 
 :root{
     --color-primary: #191d2b;
-    --color-secondary: #27AE60;
+    --color-secondary: #008080;
     --color-white: #fff;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -95,8 +95,13 @@ section{
     .control{
         padding: 0.5rem 2rem;
         cursor: pointer;
-
-
+    }
+    .control:hover:not(.active-btn){
+        background-color: var(--color-grey-4);
+    }
+    .active-btn{
+        color: var(--color-secondary);
+        border-bottom: 3px solid var(--color-secondary);
     }
     .logo{
         margin-right: auto;
