@@ -5,21 +5,21 @@ const allSections = document.querySelector('.main-content');
 
 function ChangingPage(){
     for(let i = 0; i < sectionBtn.length; i++){
-        sectionBtn[i].addEventListener('click', function(){
+        sectionBtn[i].addEventListener('click', (e) => {
             RemovingActiveTag();
-            this.className += ' active-btn'
+            e.target.className += ' active-btn'
+            
+            const id = e.target.dataset.id;
+            sections.forEach((section) => {
+                section.classList.remove('active')
+                if(section.id === id){
+                    section.classList.add('active');
+                }
+            })
         })
     }
 
-    allSections.addEventListener('click', (e) =>{
-        const id = e.target.dataset.id;
-        sections.forEach((section) => {
-            section.classList.remove('active')
-            if(section.id === id){
-                section.classList.add('active')
-            }
-        })
-    })
+
 }
 
 function RemovingActiveTag(){
