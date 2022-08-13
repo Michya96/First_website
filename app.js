@@ -3,14 +3,29 @@ const sectionBtns = document.querySelectorAll('.controls'); //Selects the group 
 const sectionBtn = document.querySelectorAll('.control'); //Selects each button in the header
 const allSections = document.querySelector('.main-content');
 
-function changingPage(){
+function ChangingPage(){
     for(let i = 0; i < sectionBtn.length; i++){
         sectionBtn[i].addEventListener('click', function(){
-            let currentBtn = document.querySelector('.active-btn');
-            currentBtn.className = currentBtn.className.replace('active-btn', '');
+            RemovingActiveTag();
             this.className += ' active-btn'
-            console.log(currentBtn)
         })
     }
+
+    allSections.addEventListener('click', (e) =>{
+        const id = e.target.dataset.id;
+        console.log(id);
+        sections.forEach((section) => {
+            section.classList.remove('active')
+            if(section.id === id){
+                section.classList.add('active')
+            }
+        })
+    })
 }
-changingPage();
+
+function RemovingActiveTag(){
+    let currentBtn = document.querySelector('.active-btn');
+    currentBtn.className = currentBtn.className.replace('active-btn', '');
+}
+
+ChangingPage();

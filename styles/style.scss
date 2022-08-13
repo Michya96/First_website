@@ -66,21 +66,29 @@ section{
 .sec1{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: slateblue;
 }
 
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(67, 60, 117);
 }
 
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(60, 106, 117);
 }
 
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(59, 133, 63);
+}
+
+.active{
+    display: block;
 }
 
 .controls{
@@ -95,6 +103,9 @@ section{
     .control{
         padding: 0.5rem 2rem;
         cursor: pointer;
+        i{
+            pointer-events: none;
+        }
     }
     .control:hover:not(.active-btn){
         background-color: var(--color-grey-4);
