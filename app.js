@@ -13,7 +13,6 @@ function ChangingPage(){
 
     allSections.addEventListener('click', (e) =>{
         const id = e.target.dataset.id;
-        console.log(id);
         sections.forEach((section) => {
             section.classList.remove('active')
             if(section.id === id){
