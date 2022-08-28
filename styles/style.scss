@@ -35,6 +35,11 @@ body{
     
 }
 
+.main-content{
+    display:grid;
+    border: 1px solid white;
+}
+
 a{
     display: inline-block;
     text-decoration: none;
@@ -43,7 +48,7 @@ a{
 }
 
 header{
-    height: 100vh;
+    // height: 100vh;
     color: var(--color-white);
     overflow: hidden;
 }
@@ -135,6 +140,21 @@ section{
         align-items: center;
         position: relative;
     }
+    .right-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .name{
+            font-size: 3rem;
+            span{
+                color: var(--color-secondary);
+            }
+        }
+        p{
+            margin: 1.5rem 0;
+            line-height: 2rem;
+        }
+    }
     .image{
         border-radius: var(--br-sm-2);
         height: 90%;
@@ -148,6 +168,78 @@ section{
             object-fit: cover;
             transition: all .4s ease-in-out;
             filter: grayscale(100%);
+            &:hover{
+                filter: grayscale(0%);
+            }
         }
+    }
+    .btn-container{
+        display: flex;
+        align-self: flex-start;
+    }
+    .main-btn{
+        background-color: var(--color-grey-5);
+        border-radius: 30px;
+        color: inherit;
+        font-weight: 600;
+        position: relative;
+        border: 1px solid var(--color-secondary);
+        display: flex;
+        align-self: flex-start;
+        align-items: center;
+        overflow: hidden;
+        transition: .5s ease-in-out;
+        .btn-text{
+            padding: 0 2rem;
+        }
+        .btn-icon{
+            background-color: var(--color-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 1rem;
+        }
+        &:hover{
+            background-color: var(--color-secondary);
+            transition: .5s ease-in-out;
+        }
+    }
+    
+}
+.main-title{
+    text-align: center;
+    h2{
+        position: relative;
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: 700;
+        span{
+            color: var(--color-secondary);
+        }
+        .bg-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: var(--color-grey-5);
+            transition: all .5s ease-in-out;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            font-weight: 800;
+            font-size: 6.3rem;
+        }
+    }
+}
+
+/* About*/
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+    .right-about{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
     }
 }

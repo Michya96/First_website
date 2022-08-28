@@ -33,6 +33,11 @@ body {
   color: white;
 }
 
+.main-content {
+  display: grid;
+  border: 1px solid white;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -41,7 +46,6 @@ a {
 }
 
 header {
-  height: 100vh;
   color: var(--color-white);
   overflow: hidden;
 }
@@ -142,6 +146,21 @@ section {
   align-items: center;
   position: relative;
 }
+.header-content .right-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-content .right-header .name {
+  font-size: 3rem;
+}
+.header-content .right-header .name span {
+  color: var(--color-secondary);
+}
+.header-content .right-header p {
+  margin: 1.5rem 0;
+  line-height: 2rem;
+}
 .header-content .image {
   border-radius: var(--br-sm-2);
   height: 90%;
@@ -157,4 +176,76 @@ section {
      object-fit: cover;
   transition: all 0.4s ease-in-out;
   filter: grayscale(100%);
+}
+.header-content .image img:hover {
+  filter: grayscale(0%);
+}
+.header-content .btn-container {
+  display: flex;
+  align-self: flex-start;
+}
+.header-content .main-btn {
+  background-color: var(--color-grey-5);
+  border-radius: 30px;
+  color: inherit;
+  font-weight: 600;
+  position: relative;
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.header-content .main-btn .btn-text {
+  padding: 0 2rem;
+}
+.header-content .main-btn .btn-icon {
+  background-color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.header-content .main-btn:hover {
+  background-color: var(--color-secondary);
+  transition: 0.5s ease-in-out;
+}
+
+.main-title {
+  text-align: center;
+}
+.main-title h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.main-title h2 span {
+  color: var(--color-secondary);
+}
+.main-title h2 .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey-5);
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  font-weight: 800;
+  font-size: 6.3rem;
+}
+
+/* About*/
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+.about-container .right-about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
 }/*# sourceMappingURL=style.css.map */
