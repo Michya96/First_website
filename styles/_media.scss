@@ -1,0 +1,147 @@
+@media screen and (max-width: 600px){
+    section{
+        padding: 1rem;
+    }
+    .header-content{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        .image{
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+    .about-container{
+        padding: 1rem;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        .left-about{
+            padding-right: 1rem;
+            padding-top: 2rem;
+        }
+    }
+    .main-title{
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+    .stat-title{
+        padding: 1rem 0;
+    }
+    .about-stats{
+        padding-bottom: 1rem;
+
+        .progress-bars{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .timeline{
+        grid-template-columns: 1fr;
+        .timeline-item{
+            margin-left: 1rem;
+            .timeline-icon{
+                left: -27px;
+            }
+        }
+
+    }
+
+    .portfolios{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards{
+        grid-template-columns: 1fr;
+        margin-top:5rem;
+        .card{
+            margin-bottom: 2rem;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1365px) and (min-width: 600px){
+    section{
+        padding: 1rem;
+    }
+    .header-content{
+        .image{
+            img{
+                width: 80%;
+                height: 80%;
+            }
+        }
+        .right-header{
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .about-container{
+        padding: 1rem;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-items: center;
+        .left-about{
+            padding-right: 1rem;
+            padding-top: 2rem;
+        }
+        .right-about{
+            align-self: center;
+        }
+    }
+    .main-title{
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+    .stat-title{
+        padding: 1rem 0;
+    }
+    .about-stats{
+        padding-bottom: 1rem;
+
+        .progress-bars{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .timeline{
+        grid-template-columns: 1fr;
+        .timeline-item{
+            margin-left: 1rem;
+            .timeline-icon{
+                left: -27px;
+            }
+        }
+
+    }
+
+    .portfolios{
+        grid-template-columns: 1fr;
+    }
+
+    .contact-cards{
+        grid-template-columns: 1fr;
+        margin-top:5rem;
+        .card{
+            margin-bottom: 2rem;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1919px) and (min-width: 1366px){
+    section{
+        padding: 5rem;
+    }
+    .header-content{
+        margin: 1rem;
+    }
+    .main-title{
+        margin-top: 2rem;
+    }
+    
+}
