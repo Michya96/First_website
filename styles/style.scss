@@ -466,6 +466,7 @@ section{
 }
 
 // Contact
+
 .contact-cards{
     margin-top: 10rem;
     display: grid;
@@ -481,9 +482,9 @@ section{
         margin-bottom: 3rem;
     }
     .card{
-        background-color: var(--color-grey-5);
-        border: 3px solid var(--color-white);
-        width: 400px;
+        // background-color: var(--color-grey-5);
+        // border: 3px solid var(--color-white);
+        width: 300px;
         height: 300px;
         transition: all .5s ease-in-out;
         &:hover{
